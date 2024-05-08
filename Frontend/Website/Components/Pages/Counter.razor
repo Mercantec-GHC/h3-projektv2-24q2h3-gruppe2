@@ -12,101 +12,30 @@
             Farver vi kan foreslå
         </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <div class="container-fluid text-center">
-                <div class="card" style="width: 100%; margin-bottom: 15px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Scanning #1</h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid text-center">
-                <div class="card" style="width: 100%; mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">Scanning #2</h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid text-center">
-                <div class="card" style="width: 100%; margin-bottom: 15px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Scanning #3</h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid text-center">
-                <div class="card" style="width: 100%; margin-bottom: 15px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Scanning #4</h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid text-center">
-                <div class="card" style="width: 100%; margin-bottom: 15px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Scanning #5</h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="container-fluid text-center">
-                <div class="card" style="width: 100%; margin-bottom: 15px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Foreslået farve #1</h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid text-center">
-                <div class="card" style="width: 100%; margin-bottom: 15px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Foreslået farve #2</h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid text-center">
-                <div class="card" style="width: 100%; margin-bottom: 15px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Foreslået farve #3</h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid text-center">
-                <div class="card" style="width: 100%; margin-bottom: 15px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Foreslået farve #4</h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid text-center">
-                <div class="card" style="width: 100%; margin-bottom: 15px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Foreslået farve #5</h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-@code {
-    public System.Windows.Forms.HtmlElement? CreateElement(string elementTag);
-    public sealed class HtmlElement;
-    private void DisplayColorScans()
+    @for (int i = 1; i <= 5; i++)
     {
-        HtmlElement containerFluid = null;
-        HtmlElement card = null;
-
+        <div class="row">
+            <div class="col">
+                <div class="container-fluid text-center">
+                    <div class="card" style="width: 100%; margin-bottom: 15px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Scanning #@i</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container-fluid text-center">
+                    <div class="card" style="width: 100%; margin-bottom: 15px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Forslået farve #@i</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     }
-}
+</div>
