@@ -12,5 +12,6 @@ namespace API.Data
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<UserColors> userColors { get; set; }
     }
 }
