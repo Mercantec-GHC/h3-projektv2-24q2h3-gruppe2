@@ -25,5 +25,13 @@ namespace API.Controllers
 
             return Ok(userColors);
         }
+        [HttpPost]
+        public async Task<ActionResult<List<UserColors>>> AddUser(UserColors userColor)
+        {
+            _context.userColors.Add(userColor);
+            await _context.SaveChangesAsync();
+
+            return Ok(await _context.userColors.ToListAsync());
+        }
     }
 }
