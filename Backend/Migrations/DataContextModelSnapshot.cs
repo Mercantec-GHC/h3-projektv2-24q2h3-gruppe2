@@ -50,7 +50,15 @@ namespace API.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("RGBValue")
+                    b.Property<string>("B")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("G")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("R")
                         .IsRequired()
                         .HasColumnType("text");
 
