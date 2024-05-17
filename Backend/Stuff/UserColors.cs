@@ -9,4 +9,8 @@
         public string B { get; set; }
         public int UserId { get; set; }
     }
+    public class AddColorRequest
+    {
+        public string R { get; set; }
+    }
 }
