@@ -13,10 +13,10 @@ char ssid[] = SECRET_SSID;        // your network SSID (name)
 char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as key for WEP)
 int status = WL_IDLE_STATUS;     // the WiFi radio's status
 
-const int serverPort = 5063;
+const int serverPort = 443;
 const char* endPoint = "/api/UserColors";
-//const char* serverAddress = "https://h3-projektv2-24q2h3-gruppe2.onrender.com";
-const char* serverAddress = "172.20.10.4";
+const char* serverAddress = "h3-projektv2-24q2h3-gruppe2.onrender.com";
+//const char* serverAddress = "172.20.10.4";
 WiFiSSLClient wifi;
 HttpClient client = HttpClient(wifi, serverAddress, serverPort);
 
@@ -87,19 +87,25 @@ void loop() {
   int r, g, b;
 
  if (carrier.Buttons.onTouchDown(TOUCH0)) {
-  carrier.Light.readColor(r, g, b); // Læs data fra RGB-sensoren
- 
+    carrier.Light.readColor(r, g, b); // Læs data fra RGB-sensoren
 
- r = min(r, 255);
-g = min(g, 255);
-b = min(b, 255);
+    r = min(r, 255);
+    g = min(g, 255);
+    b = min(b, 255);
 
+    Serial.print("R: "); Serial.print(r);
+    Serial.print(", G: "); Serial.print(g);
+    Serial.print(", B: "); Serial.println(b);
 
-  Serial.print("R: "); Serial.print(r);
-  Serial.print(", G: "); Serial.print(g);
-  Serial.print(", B: "); Serial.println(b);
+    // Convert r, g, b values to strings
+    String rStr = String(r);
+    String gStr = String(g);
+    String bStr = String(b);
 
-sendPostRequest(String (r));
+    // Get the color name
+    String colourName = getColourName(r, g, b);
+
+    sendPostRequest(colourName, rStr, gStr, bStr, 1); // userId as an integer
 
   // Konverterer RGB-værdier til en enkelt 32-bit farveværdi (for DotStar LEDs)
   uint32_t color = carrier.leds.Color(r, g, b);
@@ -117,7 +123,6 @@ sendPostRequest(String (r));
   carrier.display.setTextColor(textColor);
   carrier.display.setTextSize(2);
 
-  String colourName = getColourName(r, g, b); // Få navnet på den detekterede farve
 
   Serial.print(" R2: "); Serial.print(r);
 Serial.print(", G2: "); Serial.print(g);
@@ -226,10 +231,14 @@ void printMacAddress(byte mac[]) {
 }
 
 
-void sendPostRequest(String r) {
-    // Create a JSON payload    Serial.println(payload);
+void sendPostRequest(String scans, String r, String g, String b, int userId) {
+    // Create a JSON payload
     DynamicJsonDocument doc(1024);
-    doc["R"] = r.c_str();
+    doc["Scans"] = scans;
+    doc["R"] = r;
+    doc["G"] = g;
+    doc["B"] = b;
+    doc["UserId"] = userId;
 
     // Serialize JSON to string
     String payload;
@@ -244,21 +253,40 @@ void sendPostRequest(String r) {
     client.post(endPoint);
     client.sendHeader("Content-Type", "application/json");
     client.sendHeader("Content-Length", payload.length());
-    client.endRequest();
+    client.beginBody();
     client.print(payload);
+    client.endRequest();
 
     // Print some debug info if needed
     Serial.println("POST request sent");
-    
 
     int statusCode = client.responseStatusCode();
     String response = client.responseBody();
-    //makes a json object
+    // Print the response
     Serial.print("HTTP Response Code: ");
     Serial.println(statusCode);
     Serial.print("Response Body: ");
     Serial.println(response);
     Serial.println();
-    
 }
-
+/*void sendGetRequest() {
+    // Send GET request
+    Serial.println("Sending GET request");
+    client.beginRequest();
+    client.get(endPoint);
+    client.sendHeader("Content-Type", "application/json");
+    client.endRequest();
+ 
+    // Print some debug info if needed
+    Serial.println("GET request sent");
+ 
+    // Get the response status code and body
+    int statusCode = client.responseStatusCode();
+    String response = client.responseBody();
+    Serial.print("HTTP Response Code: ");
+    Serial.println(statusCode);
+    Serial.print("Response Body: ");
+    Serial.println(response);
+    Serial.println();
+}
+*/
