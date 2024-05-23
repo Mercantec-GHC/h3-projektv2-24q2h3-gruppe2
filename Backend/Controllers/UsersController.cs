@@ -3,7 +3,12 @@ using API.Stuff;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Diagnostics;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace API.Controllers
 {
@@ -40,10 +45,29 @@ namespace API.Controllers
         {
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
-
-            return Ok(await _context.Users.ToListAsync());
+            GenerateJWTToken(user);
+            return Ok(GenerateJWTToken(user));
         }
-        
+
+        private string GenerateJWTToken(User user)
+        {
+            var claims = new List<Claim> {
+            new Claim("username", user.Name),
+            new Claim("userId", user.Id.ToString()),
+               };
+            var jwtToken = new JwtSecurityToken(
+                claims: claims,
+                notBefore: DateTime.UtcNow,
+                expires: DateTime.UtcNow.AddDays(30),
+                signingCredentials: new SigningCredentials(
+                    new SymmetricSecurityKey(
+                       Encoding.UTF8.GetBytes("7eLQCrET8MlNnJ2Aj0qvnJnDFyurDhrDgBHRPRWtH2463Lh9")
+                        ),
+                    SecurityAlgorithms.HmacSha256Signature)
+                );
+            return new JwtSecurityTokenHandler().WriteToken(jwtToken);
+        }
+
         [HttpPut]
         public async Task<ActionResult<List<User>>> UpdateUser(User updatedUser)
         {
@@ -59,5 +83,6 @@ namespace API.Controllers
 
             return Ok(await _context.Users.ToListAsync());
         }
+        
     }
 }
