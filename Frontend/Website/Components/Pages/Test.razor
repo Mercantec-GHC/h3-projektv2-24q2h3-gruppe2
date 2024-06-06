@@ -4,7 +4,6 @@
 
 
 
-
     <h1>JS SDK</h1>
 
     <input id="username" type="text" placeholder="Username" />
@@ -14,6 +13,9 @@
     <input id="password" type="password" placeholder="Password" />
 
     <button id="createButton">Create User</button>
+
+    <h2>All Users:</h2>
+    <ul id="userList"></ul>
 
     <script type="text/javascript" src="https://npmcdn.com/parse/dist/parse.min.js"></script>
     <script>
@@ -32,14 +34,43 @@
                 user = await user.save();
                 if (user !== null) {
                     alert(`New object created with success! ObjectId: ${user.id}, ${user.get("username")}`);
+                    // Clear input fields after successful creation
+                    document.getElementById("username").value = "";
+                    document.getElementById("email").value = "";
+                    document.getElementById("password").value = "";
+                    // Refresh user list
+                    displayAllUsers();
                 }
             } catch (error) {
                 alert(`Error: ${error.message}`);
             }
         }
 
+        async function displayAllUsers() {
+            try {
+                await initializeParse();
+                const User = Parse.Object.extend("User");
+                const query = new Parse.Query(User);
+                const users = await query.find();
+                const userList = document.getElementById("userList");
+                // Clear previous list items
+                userList.innerHTML = "";
+                users.forEach(user => {
+                    const li = document.createElement("li");
+                    li.textContent = `Username: ${user.get("username")}, Email: ${user.get("email")}`;
+                    userList.appendChild(li);
+                });
+            } catch (error) {
+                console.error("Error fetching users:", error);
+            }
+        }
+
         document.getElementById("createButton").addEventListener("click", createParseUser);
+
+        // Display all users on page load
+        displayAllUsers();
     </script>
+
 
 
 @code {
