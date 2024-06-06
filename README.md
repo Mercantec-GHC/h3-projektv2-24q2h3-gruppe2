@@ -14,10 +14,18 @@ Fjern denne forklarende tekst men behold mappe struktur og skriv jeres projekt p
 *  Man åbner både dashboardet og arduino IDE op så man kan logge ind og se de scanninger man har lavet fra arduinoen
 	- bruger_manual.md
 * Man sætter sin arduino op med programmet fra "Arduino IDE", Hvorefter at den så vil connecte til et netværk, i den her version Jacobs mobilnetværk.
-Så sætter man sin arduino op mod en farve som man gerne vil have scannet og trykker på "00" 
+Så sætter man sin arduino op mod en farve som man gerne vil have scannet og trykker på "00" så går der lidt tid hvor den poster til databasen og så vil den vise på skærmen hvilken farve det er og hvilke rgb værdier.
+
 	-- Flowcharts
+  
 	-- ER diragrammer
+  ![image](https://github.com/Mercantec-GHC/h3-projektv2-24q2h3-gruppe2/assets/83217880/a6679aeb-79f7-4285-8479-abefb12a15c1)
+	-- Projekt tegning
+  ![image](https://github.com/Mercantec-GHC/h3-projektv2-24q2h3-gruppe2/assets/83217880/eb4e9066-3f91-494b-bceb-90a2340b39c2)
+
 	- Kravsspecificationer.md
+   [Kravspecifikationer.pdf](https://github.com/user-attachments/files/15609804/Kravspecifikationer.pdf)
+
 	- Case_beskrivelse.md
 - Arduino
 	-- Biblioteker
