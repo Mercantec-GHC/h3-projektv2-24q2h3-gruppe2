@@ -1,0 +1,41 @@
+﻿@page "/counter"
+@rendermode InteractiveServer
+
+<PageTitle>Scanninger</PageTitle>
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            Dine scanninger
+        </div>
+        <div class="col">
+            Farver vi kan foreslå
+        </div>
+    </div>
+
+    @for (int i = 1; i <= 5; i++)
+    {
+        <div class="row">
+            <div class="col">
+                <div class="container-fluid text-center">
+                    <div class="card" style="width: 100%; margin-bottom: 15px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Scanning #@i</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="container-fluid text-center">
+                    <div class="card" style="width: 100%; margin-bottom: 15px;">
+                        <div class="card-body">
+                            <h5 class="card-title">Forslået farve #@i</h5>
+                            <p class="card-text"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
