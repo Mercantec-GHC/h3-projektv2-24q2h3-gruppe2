@@ -6986,19 +6986,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ptli.skp\\.nuget\\packages\\": {}
+    "C:\\Users\\jacob\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\Backend\\API.csproj",
+      "projectUniqueName": "C:\\Users\\jacob\\OneDrive\\Dokumenter\\GitHub\\h3-projektv2-24q2h3-gruppe2\\h3-projektv2-24q2h3-gruppe2\\Backend\\API.csproj",
       "projectName": "API",
-      "projectPath": "C:\\Users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\Backend\\API.csproj",
-      "packagesPath": "C:\\Users\\ptli.skp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\Backend\\obj\\",
+      "projectPath": "C:\\Users\\jacob\\OneDrive\\Dokumenter\\GitHub\\h3-projektv2-24q2h3-gruppe2\\h3-projektv2-24q2h3-gruppe2\\Backend\\API.csproj",
+      "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jacob\\OneDrive\\Dokumenter\\GitHub\\h3-projektv2-24q2h3-gruppe2\\h3-projektv2-24q2h3-gruppe2\\Backend\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ptli.skp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7006,6 +7011,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "M6gd+JcQta0cGrNoJIF74xjNLzjTabmS8sliw10zB3XjfAEtY7M2mKf1ZDVdJ6ECFDx55kELyQ5E2xgD1UN56g==",
+  "dgSpecHash": "y4S6w7LFgqnWV+PQOSbwpnQTWVwI34UOPIqENql7rDPSiHaV+U3FDl5cZiXdAe1OG+3ZfWCRraaznrmigygB5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\Frontend\\Website\\Website.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\jacob\\OneDrive\\Dokumenter\\GitHub\\h3-projektv2-24q2h3-gruppe2\\h3-projektv2-24q2h3-gruppe2\\Frontend\\Website\\Website.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jacob\\.nuget\\packages\\parse\\3.0.2\\parse.3.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

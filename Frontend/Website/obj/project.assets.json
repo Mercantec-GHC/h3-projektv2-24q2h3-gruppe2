@@ -1,26 +1,63 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "Parse/3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Parse.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Parse.dll": {
+            "related": ".xml"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Parse/3.0.2": {
+      "sha512": "LAZ0JjZdkVQ9X6uEihMk+7r827X7HglMgYfwwnOY9hFU/vzpFdnBHRSfYyXThdR/aLrSmhaANZiYPHxou8tNJg==",
+      "type": "package",
+      "path": "parse/3.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "lib/netstandard2.0/Parse.dll",
+        "lib/netstandard2.0/Parse.xml",
+        "parse-logo.png",
+        "parse.3.0.2.nupkg.sha512",
+        "parse.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "parse >= 3.0.2"
+    ]
   },
   "packageFolders": {
-    "C:\\Users\\ptli.skp\\.nuget\\packages\\": {}
+    "C:\\Users\\jacob\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\Frontend\\Website\\Website.csproj",
+      "projectUniqueName": "C:\\Users\\jacob\\OneDrive\\Dokumenter\\GitHub\\h3-projektv2-24q2h3-gruppe2\\h3-projektv2-24q2h3-gruppe2\\Frontend\\Website\\Website.csproj",
       "projectName": "Website",
-      "projectPath": "C:\\Users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\Frontend\\Website\\Website.csproj",
-      "packagesPath": "C:\\Users\\ptli.skp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\Frontend\\Website\\obj\\",
+      "projectPath": "C:\\Users\\jacob\\OneDrive\\Dokumenter\\GitHub\\h3-projektv2-24q2h3-gruppe2\\h3-projektv2-24q2h3-gruppe2\\Frontend\\Website\\Website.csproj",
+      "packagesPath": "C:\\Users\\jacob\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jacob\\OneDrive\\Dokumenter\\GitHub\\h3-projektv2-24q2h3-gruppe2\\h3-projektv2-24q2h3-gruppe2\\Frontend\\Website\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ptli.skp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jacob\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -28,6 +65,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -50,6 +88,12 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "parse": {
+            "target": "Package",
+            "version": "[3.0.2, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
