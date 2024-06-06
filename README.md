@@ -1,4 +1,4 @@
-### H3-Smart-Kommunikationsplatform - {Indsæt gruppenavn}
+### H3-Smart-Kommunikationsplatform - {Gruppe 2}
 
 Her skal alt omkring jeres projekt være. 
 
@@ -11,7 +11,10 @@ Fjern denne forklarende tekst men behold mappe struktur og skriv jeres projekt p
 
 - Dokumentation
 	- setup.md
+*  Man åbner både dashboardet og arduino IDE op så man kan logge ind og se de scanninger man har lavet fra arduinoen
 	- bruger_manual.md
+* Man sætter sin arduino op med programmet fra "Arduino IDE", Hvorefter at den så vil connecte til et netværk, i den her version Jacobs mobilnetværk.
+Så sætter man sin arduino op mod en farve som man gerne vil have scannet og trykker på "00" 
 	-- Flowcharts
 	-- ER diragrammer
 	- Kravsspecificationer.md
