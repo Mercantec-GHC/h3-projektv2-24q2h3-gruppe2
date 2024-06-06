@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\Frontend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A7CA210-5584-4831-A633-BB4A34D7A871}|Website\\Website.csproj|c:\\users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\frontend\\website\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1A7CA210-5584-4831-A633-BB4A34D7A871}|Website\\Website.csproj|solutionrelative:website\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1A7CA210-5584-4831-A633-BB4A34D7A871}|Website\\Website.csproj|c:\\users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\frontend\\website\\components\\layout\\cardcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1A7CA210-5584-4831-A633-BB4A34D7A871}|Website\\Website.csproj|solutionrelative:website\\components\\layout\\cardcomponent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A7CA210-5584-4831-A633-BB4A34D7A871}|Website\\Website.csproj|c:\\users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\frontend\\website\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1A7CA210-5584-4831-A633-BB4A34D7A871}|Website\\Website.csproj|solutionrelative:website\\components\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1A7CA210-5584-4831-A633-BB4A34D7A871}|Website\\Website.csproj|c:\\users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\frontend\\website\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CardComponent.razor",
               "DocumentMoniker": "C:\\Users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\Frontend\\Website\\Components\\Layout\\CardComponent.razor",
               "RelativeDocumentMoniker": "Website\\Components\\Layout\\CardComponent.razor",
@@ -50,11 +50,12 @@
               "RelativeToolTip": "Website\\Components\\Layout\\CardComponent.razor",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-07T07:48:31.683Z"
+              "WhenOpened": "2024-05-07T07:48:31.683Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Counter.razor",
               "DocumentMoniker": "C:\\Users\\ptli.skp\\source\\repos\\h3-projektv2-24q2h3-gruppe2\\Frontend\\Website\\Components\\Pages\\Counter.razor",
               "RelativeDocumentMoniker": "Website\\Components\\Pages\\Counter.razor",
