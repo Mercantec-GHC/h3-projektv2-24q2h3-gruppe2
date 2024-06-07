@@ -5,16 +5,23 @@ Her skal alt omkring jeres projekt være.
 Projekt kan findes her: ["Notion link"](https://mercantec.notion.site/Projekt-H3-IoT-og-Serverside-med-Christoffer-og-Kasper-e8980638a8584a72b0c7d718252dbba4?pvs=4)
 
 
-Dette er mappe strukturen (i er velkommen til at ændre i den, men så opdater dette dokument)
 
-Fjern denne forklarende tekst men behold mappe struktur og skriv jeres projekt pitch. Andet info må i også meget gerne have her
 
 - Dokumentation
-	- setup.md
-*  Man åbner både dashboardet og arduino IDE op så man kan logge ind og se de scanninger man har lavet fra arduinoen
-	- bruger_manual.md
+	
+ - Man skal bruge:
+   *Arduino
+   *Arduino Carrier
+   *Ledning
+   *Pc med Arduino IDE (Hvis ikke uploadet på Arduinoen) og visual studio (Hvis ikke sat op til at man kan åbne siden uden)
+
+    - setup.md
+*  Først åbner man Sketchen op i arduino IDE for at uploade programmet til sin arduino som man har sat i computeren
+*  Så åbner man Frontend.sln op og kør den for at komme ind på dashboardet
+
+   - bruger_manual.md
 * Man sætter sin arduino op med programmet fra "Arduino IDE", Hvorefter at den så vil connecte til et netværk, i den her version Jacobs mobilnetværk.
-Så sætter man sin arduino op mod en farve som man gerne vil have scannet og trykker på "00" så går der lidt tid hvor den poster til databasen og så vil den vise på skærmen hvilken farve det er og hvilke rgb værdier.
+Så sætter man sin arduino op mod en farve som man gerne vil have scannet og trykker på "00" så går der lidt tid hvor den poster til databasen og så vil den vise på skærmen hvilken farve det er og hvilke rgb værdier du har scannet. Det kan man blive ved med, hvor den vil uploade det til databasen hver gang.
 
 	-- Flowcharts
   
@@ -31,7 +38,9 @@ Så sætter man sin arduino op mod en farve som man gerne vil have scannet og tr
 	-- Biblioteker
 	-- Sketches
 - Database
+  Vi har 2 databaser, 1 som vi selv har lavet og indsat værdier i og 1 som vi fik fra nettet med en masse farver samt RGB værdier til
 - Backend (api)
+  Så har vi lavet vores API til at kunne post, get, delete og create colors på databasen fra vores arduino
 - Frontend
 - Tests
 .gitignore
@@ -39,7 +48,6 @@ README.md
 
 ### Projekt pitch:
 
-"Vi vil lave en **[grundlæggende beskrivelse af projektidéen]**, som gør brug af disse hardwarekomponenter: **[nævn hardwarekomponenter]**. Vores mål er at udvikle en løsning, der kan **[kort beskrivelse af, hvad løsningen gør eller løser]**, ved at integrere et interaktivt system, der kan indsamle og reagere på data. For at opnå dette, tænker vi at an	vende **[nævn teknologier, programmeringssprog, databaser osv.]** til at opbygge systemet, som vil tillade os at **[beskriv hvordan teknologien vil blive brugt til at løse problemet eller forbedre en situation]**.
 
-Vores system vil kunne interagere med brugerne gennem et dashboard, der viser **[nævn hvilke data eller funktioner dashboardet vil vise eller kontrollere]**, hvilket giver brugerne mulighed for at **[beskriv hvad brugerne kan gøre med dashboardet]**. Dette projekt vil ikke kun give os praktisk erfaring med **[nævn relevante teknologier eller færdigheder]**, men også muligheden for at udforske, hvordan teknologi kan anvendes til at løse reelle problemer eller forbedre dagligdagen."
+Vi vil lave en Rgb scanner som scanner de farver man sætter selve arduinoen op imod og så giver rgb værdien og farven tilbage af hvad end man har scannet, og så vil den tage den værdi op på ens dashboard, hvor man kan se de scanninger man har lavet på den bruger og hvilke farver der vil matche til den farve. Vi bruger rgb scanneren og touch sensorerne som er en del af den carrier vi fik med til arduinoen
 
