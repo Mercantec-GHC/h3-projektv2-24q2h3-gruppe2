@@ -61,3 +61,6 @@ C:\Users\jacob\OneDrive\Dokumenter\GitHub\h3-projektv2-24q2h3-gruppe2\h3-projekt
 C:\Users\jacob\OneDrive\Dokumenter\GitHub\h3-projektv2-24q2h3-gruppe2\h3-projektv2-24q2h3-gruppe2\Frontend\Website\bin\Debug\net8.0\Parse.dll
 C:\Users\jacob\OneDrive\Dokumenter\GitHub\h3-projektv2-24q2h3-gruppe2\h3-projektv2-24q2h3-gruppe2\Frontend\Website\obj\Debug\net8.0\Website.csproj.AssemblyReference.cache
 C:\Users\jacob\OneDrive\Dokumenter\GitHub\h3-projektv2-24q2h3-gruppe2\h3-projektv2-24q2h3-gruppe2\Frontend\Website\obj\Debug\net8.0\Website.csproj.Up2Date
+C:\Users\ptli.skp\source\repos\h3-projektv2-24q2h3-gruppe2\Frontend\Website\bin\Debug\net8.0\Parse.dll
+C:\Users\ptli.skp\source\repos\h3-projektv2-24q2h3-gruppe2\Frontend\Website\obj\Debug\net8.0\Website.csproj.AssemblyReference.cache
+C:\Users\ptli.skp\source\repos\h3-projektv2-24q2h3-gruppe2\Frontend\Website\obj\Debug\net8.0\Website.csproj.Up2Date
